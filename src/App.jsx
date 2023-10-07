@@ -7,6 +7,7 @@ import background from "./assets/bag.jpeg";
 function App() {
   return (
     <div
+      className="min-h-screen "
       style={{
         backgroundImage: `url(${background})`,
         backgroundRepeat: "no-repeat",
