@@ -30,8 +30,8 @@ const Header = () => {
     <div className=" px-10 md:px-20 mt-10">
       {movies && (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 py-10">
-          {movies.map((movie) => (
-            <MovieCard key={movie.episode_id} movie={movie} />
+          {movies.map((movie, index) => (
+            <MovieCard key={movie.episode_id} movie={movie} index={index} />
           ))}
         </div>
       )}

@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 /* eslint-disable react/prop-types */
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, index }) => {
   // eslint-disable-next-line react/prop-types
   const { title, opening_crawl, release_date } = movie;
 
@@ -25,12 +26,16 @@ const MovieCard = ({ movie }) => {
         className="
         text-base font-medium mt-4 text-gray-500
         "
-      >{opening_crawl}</p>
+      >
+        {opening_crawl}
+      </p>
 
       <div className="flex justify-end mt-3">
-        <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
-          <span>More</span>
-        </button>
+        <Link to={`/movie/${index + 1}`} state={{movie}} >
+          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+            Read More
+          </button>
+        </Link>
       </div>
     </div>
   );
