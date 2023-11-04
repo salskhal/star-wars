@@ -1,11 +1,11 @@
+/* eslint-disable react/prop-types */
 const MovieCard = ({ movie }) => {
+  // eslint-disable-next-line react/prop-types
   const { title, opening_crawl, release_date } = movie;
 
-  //   make release_date in the format of May 17, 1999
   const date = new Date(release_date);
   const options = { year: "numeric", month: "long", day: "numeric" };
   const formattedDate = date.toLocaleDateString("en-US", options);
-  console.log(formattedDate);
 
   return (
     <div
@@ -23,7 +23,7 @@ const MovieCard = ({ movie }) => {
       <p className="text-sm font-semibold">{formattedDate}</p>
       <p
         className="
-        text-base font-medium mt-4 text-justify
+        text-base font-medium mt-4 text-gray-500
         "
       >{opening_crawl}</p>
 
