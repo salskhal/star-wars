@@ -1,7 +1,6 @@
-import { useParams, useLocation } from "react-router-dom";
+import {  useLocation } from "react-router-dom";
 
 function Detail() {
-  const { movieId } = useParams();
   const location = useLocation();
 
   const movie = location.state.movie;
